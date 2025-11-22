@@ -1,0 +1,15 @@
+{
+  email i3raxton@gmail.com
+}
+
+plex.braxtonthompson.com {
+  reverse_proxy 127.0.0.1:32400
+}
+
+jellyseerr.braxtonthompson.com {
+  reverse_proxy 127.0.0.1:5055
+}
+
+dispatcharr.braxtonthompson.com {
+  reverse_proxy 127.0.0.1:9191
+}

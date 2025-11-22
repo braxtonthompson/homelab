@@ -1,14 +1,16 @@
-# ---- Frigate runtime files ----
+# Frigate
 docker/frigate/config/*.db
 docker/frigate/config/*.db-wal
 docker/frigate/config/*.db-shm
 docker/frigate/config/model_cache/
 docker/frigate/config/backup.db
+docker/frigate/config/frigate.db*
 
-# Logs (if any appear later)
-docker/nvr/frigate/logs/
+# Dispatcharr
 docker/dispatcharr/config/db/
 docker/dispatcharr/config/models/
-docker/frigate/config/frigate.db*
-docker/frigate/config/frigate.db*
 docker/dispatcharr/config/db/
+
+# Caddy
+docker/caddy/config/*
+docker/caddy/data/*
