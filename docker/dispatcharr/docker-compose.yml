@@ -9,3 +9,6 @@ services:
       - ./config:/data
     environment:
       - DISPATCHARR_ENV=aio  # All-in-one (Postgres/Redis inside container)
+    devices:
+      - /dev/dri:/dev/dri
+
