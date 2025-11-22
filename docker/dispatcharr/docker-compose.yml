@@ -1,0 +1,11 @@
+services:
+  dispatcharr:
+    image: ghcr.io/dispatcharr/dispatcharr:latest
+    container_name: dispatcharr
+    restart: unless-stopped
+    ports:
+      - "9191:9191"          # Web UI + outputs
+    volumes:
+      - ./config:/data
+    environment:
+      - DISPATCHARR_ENV=aio  # All-in-one (Postgres/Redis inside container)

@@ -7,3 +7,6 @@ docker/frigate/config/backup.db
 
 # Logs (if any appear later)
 docker/nvr/frigate/logs/
+docker/dispatcharr/config/db/
+docker/dispatcharr/config/models/
+docker/frigate/config/frigate.db*
