@@ -1,0 +1,12 @@
+cameras:
+  living_room:
+    ffmpeg:
+      inputs:
+        - path: rtsp://tapoC120:password@192.168.3.69:554/stream1
+          roles:
+            - detect
+            - record
+    detect:
+      width: 2560    # set to your camera resolution
+      height: 1440
+      fps: 30
