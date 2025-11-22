@@ -1,0 +1,27 @@
+services:
+  ########################################
+  # Frigate
+  ########################################
+  frigate:
+    image: ghcr.io/blakeblackshear/frigate:stable
+    container_name: frigate
+    restart: unless-stopped
+    privileged: true          # easier to get started; you can lock this down later
+    shm_size: "512mb"         # adjust based on number/resolution of cameras
+    environment:
+      - TZ=America/Chicago
+    volumes:
+      - ./config:/config
+      - /mnt/storage/frigate:/media/frigate
+      - type: tmpfs
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000    # ~1GB RAM cache for ffmpeg
+    ports:
+      - 5000:5000             # Frigate web UI
+      - 8554:8554             # RTSP (go2rtc)
+      - 8555:8555/tcp         # WebRTC
+      - 8555:8555/udp
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0

@@ -1,9 +1,9 @@
 # ---- Frigate runtime files ----
-docker/nvr/frigate/*.db
-docker/nvr/frigate/*.db-wal
-docker/nvr/frigate/*.db-shm
-docker/nvr/frigate/model_cache/
-docker/nvr/frigate/backup.db
+docker/frigate/config/*.db
+docker/frigate/config/*.db-wal
+docker/frigate/config/*.db-shm
+docker/frigate/config/model_cache/
+docker/frigate/config/backup.db
 
 # Logs (if any appear later)
 docker/nvr/frigate/logs/
