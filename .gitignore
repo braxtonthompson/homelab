@@ -11,3 +11,4 @@ docker/dispatcharr/config/db/
 docker/dispatcharr/config/models/
 docker/frigate/config/frigate.db*
 docker/frigate/config/frigate.db*
+docker/dispatcharr/config/db/
