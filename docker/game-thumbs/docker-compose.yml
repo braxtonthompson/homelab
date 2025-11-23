@@ -1,0 +1,19 @@
+services:
+  game-thumbs:
+    image: ghcr.io/sethwv/game-thumbs:latest
+    container_name: game-thumbs
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - IMAGE_CACHE_HOURS=24
+      - RATE_LIMIT_PER_MINUTE=60
+      - TRUST_PROXY=2
+      - REQUEST_TIMEOUT=10000
+      - SERVER_TIMEOUT=30000
+      - SHOW_TIMESTAMP=true
+      # Add more env vars here as desired
+    volumes:
+      - ./logs:/app/logs    # optional: persist logs
