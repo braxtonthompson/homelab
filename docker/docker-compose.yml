@@ -1,0 +1,8 @@
+include:
+  - path: dispatcharr/docker-compose.yml
+  - path: mariadb/docker-compose.yml
+  - path: booklore/docker-compose.yml
+  - path: caddy/docker-compose.yml
+  - path: frigate/docker-compose.yml
+  - path: game-thumbs/docker-compose.yml
+
