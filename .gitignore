@@ -1,16 +1,6 @@
-# Frigate
-docker/frigate/config/*.db
-docker/frigate/config/*.db-wal
-docker/frigate/config/*.db-shm
-docker/frigate/config/model_cache/
-docker/frigate/config/backup.db
-docker/frigate/config/frigate.db*
+# Ignore all directories inside docker, but keep the files.
+docker/*/**/
+!docker/*/*.*
 
-# Dispatcharr
-docker/dispatcharr/config/db/
-docker/dispatcharr/config/models/
-docker/dispatcharr/config/db/
-
-# Caddy
-docker/caddy/config/*
-docker/caddy/data/*
+# Ignore .env file.
+.env
