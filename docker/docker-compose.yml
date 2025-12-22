@@ -5,4 +5,4 @@ include:
   - path: caddy/docker-compose.yml
   - path: frigate/docker-compose.yml
   - path: game-thumbs/docker-compose.yml
-
+  - path: teamarr/docker-compose.yml
