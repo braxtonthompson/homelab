@@ -1,0 +1,17 @@
+services:
+  chaptarr:
+    image: robertlordhood/chaptarr:latest
+    ports:
+      - 8789:8789
+    volumes:
+      - ./config:/config
+      - ${STORAGE_PATH}/books:/books
+      - ${STORAGE_PATH}/audiobooks:/audiobooks
+    environment:
+      - TZ=${TZ}
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped
+    hostname: chaptarr
+    container_name: chaptarr
+networks: {}

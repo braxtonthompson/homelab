@@ -11,4 +11,9 @@ services:
       - DISPATCHARR_ENV=aio  # All-in-one (Postgres/Redis inside container)
     devices:
       - /dev/dri:/dev/dri
+    labels:
+      glance.name: Dispatcharr
+      glance.icon: si:Dispatcharr
+      glance.url: ${TAILSCALE_URL}:9191
+      glance.description: IPTV configuration tool
 

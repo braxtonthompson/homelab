@@ -6,3 +6,5 @@ include:
   - path: frigate/docker-compose.yml
   - path: game-thumbs/docker-compose.yml
   - path: teamarr/docker-compose.yml
+  - path: glance/docker-compose.yml
+  - path: chaptarr/docker-compose.yml
