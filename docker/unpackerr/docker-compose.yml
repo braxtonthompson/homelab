@@ -1,0 +1,14 @@
+services:
+  unpackerr:
+    image: golift/unpackerr:latest
+    container_name: unpackerr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - ${STORAGE_PATH}/torrents:/mediarr/torrents
+      - ./unpackerr:/config
+    ports:
+      - 3001:3000

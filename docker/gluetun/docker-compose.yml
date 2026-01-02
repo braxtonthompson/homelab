@@ -1,0 +1,23 @@
+services:
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    container_name: gluetun
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - TZ=America/Chicago
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - VPN_TYPE=openvpn
+      - OPENVPN_USER=${OPENVPN_USER}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - FIREWALL_OUTBOUND_SUBNETS=192.168.0.0/16
+    volumes:
+      - ./gluetun:/gluetun
+    ports:
+      - 8080:8080        # qBittorrent WebUI
+      - 6881:6881        # qBittorrent TCP
+      - 6881:6881/udp    # qBittorrent UDP
+      - 9696:9696        # Prowlarr WebUI

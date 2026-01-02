@@ -1,0 +1,11 @@
+services:
+  huntarr:
+    image: ghcr.io/plexguide/huntarr:latest
+    container_name: huntarr
+    restart: always
+    ports:
+      - 9705:9705
+    volumes:
+      - ./huntarr:/config
+    environment:
+      - TZ=America/New_York

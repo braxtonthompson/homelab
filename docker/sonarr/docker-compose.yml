@@ -1,0 +1,14 @@
+services:
+  sonarr:
+    image: ghcr.io/hotio/sonarr:latest
+    container_name: sonarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - ./sonarr:/config
+      - ${STORAGE_PATH}:/mediarr
+    ports:
+      - 8989:8989

@@ -1,0 +1,19 @@
+services:
+  plex:
+    image: plexinc/pms-docker:latest
+    container_name: plex
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - TZ=America/Chicago
+      - PLEX_UID=1000
+      - PLEX_GID=1000
+      - PGID=44
+    volumes:
+      - ./plex:/config
+      - ${STORAGE_PATH}/media/movies:/media/movies
+      - ${STORAGE_PATH}/media/tv:/media/tv
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - video

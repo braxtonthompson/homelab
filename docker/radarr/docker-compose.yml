@@ -1,0 +1,14 @@
+services:
+  radarr:
+    image: ghcr.io/hotio/radarr:latest
+    container_name: radarr
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - ./radarr:/config
+      - ${STORAGE_PATH}:/mediarr
+    ports:
+      - 7878:7878

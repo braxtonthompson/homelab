@@ -8,3 +8,17 @@ include:
   - path: teamarr/docker-compose.yml
   - path: glance/docker-compose.yml
   - path: chaptarr/docker-compose.yml
+  - path: plex/docker-compose.yml
+  - path: jellyseerr/docker-compose.yml
+  - path: maintainerr/docker-compose.yml
+  - path: radarr/docker-compose.yml
+  - path: sonarr/docker-compose.yml
+  - path: prowlarr/docker-compose.yml
+  - path: huntarr/docker-compose.yml
+  - path: qbittorrent/docker-compose.yml
+  - path: unpackerr/docker-compose.yml
+  - path: bazarr/docker-compose.yml
+  - path: gluetun/docker-compose.yml
+  - path: cloudflare-ddns/docker-compose.yml
+  - path: profilarr/docker-compose.yml
+  - path: qui/docker-compose.yml
